@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CECRES - Communauté Spirituelle</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Slick Carousel CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+        <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- Slick Carousel JS -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navigation" class="nav-fixed">
+        <div class="nav-container">
+            <div class="nav-content">
+                <div class="nav-logo">
+                    <img src="logo-cecres.png" alt="CECRES Logo" class="logo-img">
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="nav-links desktop-nav">
+                    <a href="#home" class="nav-link">Accueil</a>
+                    <a href="#about" class="nav-link">Qui sommes Nous</a>
+                    <a href="#services" class="nav-link">Nos Services</a>
+                    <a href="#edification" class="nav-link">Édification</a>
+                    <a href="#mediatheque" class="nav-link">Médiathèque</a>
+                    <a href="#testimonials" class="nav-link">Témoignages</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                    <button class="btn btn-primary">Rejoindre</button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i data-lucide="menu" class="menu-icon"></i>
+                    <i data-lucide="x" class="close-icon hidden"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div class="mobile-nav hidden" id="mobileNav">
+                <a href="#home" class="mobile-nav-link">Accueil</a>
+                <a href="#about" class="mobile-nav-link">Qui sommes Nous</a>
+                <a href="#services" class="mobile-nav-link">Nos Services</a>
+                <a href="#edification" class="mobile-nav-link">Édification</a>
+                <a href="#mediatheque" class="mobile-nav-link">Médiathèque</a>
+                <a href="#testimonials" class="mobile-nav-link">Témoignages</a>
+                <a href="#contact" class="mobile-nav-link">Contact</a>
+                <button class="btn btn-primary w-full">Rejoindre</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Slider -->
+    <section id="home" class="hero-section">
+        <div class="hero-slider">
+            <!-- Slide 1 -->
+            <div class="hero-slide">
+                <img src="https://images.unsplash.com/photo-1557929878-b358f3bdbdd7?w=1920&q=80" alt="Bienvenue à CECRES" class="hero-image">
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <h1 class="hero-title">Bienvenue à CECRES</h1>
+                    <p class="hero-subtitle">Un espace sacré pour grandir ensemble dans la foi et la communion</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary btn-lg">Rejoindre la Communauté</button>
+                        <button class="btn btn-outline btn-lg">Découvrir</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="hero-slide">
+                <img src="https://images.unsplash.com/photo-1695938542997-a2c3f39d0dbf?w=1920&q=80" alt="Louange et Adoration" class="hero-image">
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <h1 class="hero-title">Louange et Adoration</h1>
+                    <p class="hero-subtitle">Célébrons ensemble la gloire de Dieu dans la joie et l'harmonie</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary btn-lg">Nos Cultes</button>
+                        <button class="btn btn-outline btn-lg">En savoir plus</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="hero-slide">
+                <img src="https://images.unsplash.com/photo-1717726974204-283223a87e07?w=1920&q=80" alt="Étude de la Parole" class="hero-image">
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <h1 class="hero-title">Étude de la Parole</h1>
+                    <p class="hero-subtitle">Approfondissons notre connaissance biblique et grandissons spirituellement</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary btn-lg">Nos Études</button>
+                        <button class="btn btn-outline btn-lg">Programme</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="hero-slide">
+                <img src="https://images.unsplash.com/photo-1715960350325-fbfaed379d8e?w=1920&q=80" alt="Communauté et Partage" class="hero-image">
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <h1 class="hero-title">Communauté et Partage</h1>
+                    <p class="hero-subtitle">Une famille unie dans l'amour du Christ et le service mutuel</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary btn-lg">Nous Rejoindre</button>
+                        <button class="btn btn-outline btn-lg">Témoignages</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Notre Mission</h2>
+                <p class="section-description">
+                    Nous sommes une communauté dédiée à l'évolution spirituelle et au développement personnel. 
+                    Ensemble, nous explorons les chemins de la sagesse ancienne et des pratiques contemporaines.
+                </p>
+            </div>
+
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i data-lucide="heart"></i>
+                    </div>
+                    <h3 class="value-title">Compassion</h3>
+                    <p class="value-description">Cultiver l'amour bienveillant envers soi-même et les autres</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i data-lucide="users"></i>
+                    </div>
+                    <h3 class="value-title">Communauté</h3>
+                    <p class="value-description">Grandir ensemble dans un espace de soutien mutuel et d'authenticité</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i data-lucide="sparkles"></i>
+                    </div>
+                    <h3 class="value-title">Éveil</h3>
+                    <p class="value-description">Explorer les dimensions spirituelles de l'existence avec ouverture</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section-services">
+        <div class="container-large">
+            <div class="section-header">
+                <h2 class="section-title">Nos Services</h2>
+                <p class="section-description">
+                    Découvrez nos différents services conçus pour nourrir votre vie spirituelle et renforcer votre foi
+                </p>
+            </div>
+
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card">
+                    <div class="service-icon red">
+                        <i data-lucide="music"></i>
+                    </div>
+                    <h3 class="service-title">Cultes et Louange</h3>
+                    <p class="service-description">Services de louange dynamiques tous les dimanches avec une chorale inspirante</p>
+                    <div class="service-time">
+                        <i data-lucide="clock"></i>
+                        <span>Dimanche 9h00 & 11h00</span>
+                    </div>
+                    <button class="btn btn-primary w-full">Plus d'infos</button>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card">
+                    <div class="service-icon blue">
+                        <i data-lucide="book-open"></i>
+                    </div>
+                    <h3 class="service-title">École du Dimanche</h3>
+                    <p class="service-description">Enseignement biblique adapté pour tous les âges, enfants et adultes</p>
+                    <div class="service-time">
+                        <i data-lucide="clock"></i>
+                        <span>Dimanche 10h00</span>
+                    </div>
+                    <button class="btn btn-primary w-full">Plus d'infos</button>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card">
+                    <div class="service-icon green">
+                        <i data-lucide="users"></i>
+                    </div>
+                    <h3 class="service-title">Groupes de Prière</h3>
+                    <p class="service-description">Rencontres de prière et d'intercession pour la communauté et le monde</p>
+                    <div class="service-time">
+                        <i data-lucide="clock"></i>
+                        <span>Mercredi 19h00</span>
+                    </div>
+                    <button class="btn btn-primary w-full">Plus d'infos</button>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-card">
+                    <div class="service-icon purple">
+                        <i data-lucide="heart"></i>
+                    </div>
+                    <h3 class="service-title">Conseil et Accompagnement</h3>
+                    <p class="service-description">Soutien spirituel et conseil pastoral pour tous vos besoins</p>
+                    <div class="service-time">
+                        <i data-lucide="clock"></i>
+                        <span>Sur rendez-vous</span>
+                    </div>
+                    <button class="btn btn-primary w-full">Plus d'infos</button>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="service-card">
+                    <div class="service-icon orange">
+                        <i data-lucide="users"></i>
+                    </div>
+                    <h3 class="service-title">Groupes de Jeunes</h3>
+                    <p class="service-description">Activités et enseignements dynamiques pour la jeunesse</p>
+                    <div class="service-time">
+                        <i data-lucide="clock"></i>
+                        <span>Samedi 15h00</span>
+                    </div>
+                    <button class="btn btn-primary w-full">Plus d'infos</button>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="service-card">
+                    <div class="service-icon indigo">
+                        <i data-lucide="book-open"></i>
+                    </div>
+                    <h3 class="service-title">Études Bibliques</h3>
+                    <p class="service-description">Approfondissement de la Parole en petits groupes interactifs</p>
+                    <div class="service-time">
+                        <i data-lucide="clock"></i>
+                        <span>Jeudi 19h30</span>
+                    </div>
+                    <button class="btn btn-primary w-full">Plus d'infos</button>
+                </div>
+            </div>
+
+            <div class="cta-box">
+                <h3 class="cta-title">Rejoignez-nous ce Dimanche</h3>
+                <p class="cta-description">
+                    Vous êtes les bienvenus dans notre communauté chaleureuse. Venez découvrir l'amour de Dieu et partager des moments de communion fraternelle.
+                </p>
+                <button class="btn btn-primary btn-lg">Planifier une Visite</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Edification Section -->
+    <section id="edification" class="section-edification">
+        <div class="container-large">
+            <div class="section-header">
+                <h2 class="section-title">Édification</h2>
+                <p class="section-description">
+                    Ressources spirituelles pour votre croissance personnelle et votre affermissement dans la foi
+                </p>
+            </div>
+
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <div class="resource-image">
+                        <img src="https://images.unsplash.com/photo-1717726974204-283223a87e07?w=800&q=80" alt="Enseignements Bibliques">
+                        <div class="resource-overlay"></div>
+                        <div class="resource-icon-top">
+                            <i data-lucide="book-open"></i>
+                        </div>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Enseignements Bibliques</h3>
+                        <p class="resource-description">Séries d'enseignements approfondis sur les livres de la Bible et les thèmes spirituels essentiels</p>
+                        <button class="btn btn-primary w-full">Découvrir</button>
+                    </div>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-image">
+                        <img src="https://images.unsplash.com/photo-1695938542997-a2c3f39d0dbf?w=800&q=80" alt="Vidéos Inspirantes">
+                        <div class="resource-overlay"></div>
+                        <div class="resource-icon-top">
+                            <i data-lucide="video"></i>
+                        </div>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Vidéos Inspirantes</h3>
+                        <p class="resource-description">Messages vidéo, témoignages et enseignements pour fortifier votre marche avec Dieu</p>
+                        <button class="btn btn-primary w-full">Découvrir</button>
+                    </div>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-image">
+                        <img src="https://images.unsplash.com/photo-1715960350325-fbfaed379d8e?w=800&q=80" alt="Podcasts">
+                        <div class="resource-overlay"></div>
+                        <div class="resource-icon-top">
+                            <i data-lucide="headphones"></i>
+                        </div>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Podcasts et Prédications</h3>
+                        <p class="resource-description">Écoutez nos messages du dimanche et nos podcasts sur la croissance spirituelle</p>
+                        <button class="btn btn-primary w-full">Découvrir</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recent-teachings">
+                <div class="teachings-header">
+                    <h3 class="teachings-title">Enseignements Récents</h3>
+                    <button class="btn btn-outline-red">Voir Tout</button>
+                </div>
+                <div class="teachings-grid">
+                    <div class="teaching-item">
+                        <div class="teaching-icon">
+                            <i data-lucide="file-text"></i>
+                        </div>
+                        <div class="teaching-info">
+                            <h4 class="teaching-name">La Puissance de la Prière</h4>
+                            <div class="teaching-meta">
+                                <span>15 Février 2026</span>
+                                <span class="teaching-badge">Prédication</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="teaching-item">
+                        <div class="teaching-icon">
+                            <i data-lucide="file-text"></i>
+                        </div>
+                        <div class="teaching-info">
+                            <h4 class="teaching-name">Vivre dans l'Espérance</h4>
+                            <div class="teaching-meta">
+                                <span>8 Février 2026</span>
+                                <span class="teaching-badge">Enseignement</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="teaching-item">
+                        <div class="teaching-icon">
+                            <i data-lucide="file-text"></i>
+                        </div>
+                        <div class="teaching-info">
+                            <h4 class="teaching-name">Le Fruit de l'Esprit</h4>
+                            <div class="teaching-meta">
+                                <span>1 Février 2026</span>
+                                <span class="teaching-badge">Série</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="teaching-item">
+                        <div class="teaching-icon">
+                            <i data-lucide="file-text"></i>
+                        </div>
+                        <div class="teaching-info">
+                            <h4 class="teaching-name">Grandir en Maturité Spirituelle</h4>
+                            <div class="teaching-meta">
+                                <span>25 Janvier 2026</span>
+                                <span class="teaching-badge">Conférence</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mediatheque Section -->
+    <section id="mediatheque" class="section-mediatheque">
+        <div class="container-large">
+            <div class="section-header">
+                <h2 class="section-title">Médiathèque</h2>
+                <p class="section-description">
+                    Accédez à notre bibliothèque de contenus spirituels : vidéos, audios et photos de nos événements
+                </p>
+            </div>
+
+            <div class="tabs">
+                <div class="tabs-list">
+                    <button class="tab-trigger active" data-tab="videos">Vidéos</button>
+                    <button class="tab-trigger" data-tab="audios">Audios</button>
+                    <button class="tab-trigger" data-tab="photos">Photos</button>
+                </div>
+
+                <!-- Videos Tab -->
+                <div class="tab-content active" id="videos">
+                    <div class="media-grid">
+                        <div class="video-card">
+                            <div class="video-thumbnail">
+                                <img src="https://images.unsplash.com/photo-1695938542997-a2c3f39d0dbf?w=600&q=80" alt="Video">
+                                <div class="video-overlay">
+                                    <div class="play-button">
+                                        <i data-lucide="play"></i>
+                                    </div>
+                                </div>
+                                <span class="video-duration">1:45:30</span>
+                            </div>
+                            <div class="video-info">
+                                <h3 class="video-title">Culte du Dimanche - 16 Février 2026</h3>
+                                <p class="video-views">245 vues</p>
+                            </div>
+                        </div>
+
+                        <div class="video-card">
+                            <div class="video-thumbnail">
+                                <img src="https://images.unsplash.com/photo-1717726974204-283223a87e07?w=600&q=80" alt="Video">
+                                <div class="video-overlay">
+                                    <div class="play-button">
+                                        <i data-lucide="play"></i>
+                                    </div>
+                                </div>
+                                <span class="video-duration">45:20</span>
+                            </div>
+                            <div class="video-info">
+                                <h3 class="video-title">La Foi qui Déplace les Montagnes</h3>
+                                <p class="video-views">180 vues</p>
+                            </div>
+                        </div>
+
+                        <div class="video-card">
+                            <div class="video-thumbnail">
+                                <img src="https://images.unsplash.com/photo-1715960350325-fbfaed379d8e?w=600&q=80" alt="Video">
+                                <div class="video-overlay">
+                                    <div class="play-button">
+                                        <i data-lucide="play"></i>
+                                    </div>
+                                </div>
+                                <span class="video-duration">1:20:15</span>
+                            </div>
+                            <div class="video-info">
+                                <h3 class="video-title">Louange et Adoration - Concert Spécial</h3>
+                                <p class="video-views">320 vues</p>
+                            </div>
+                        </div>
+
+                        <div class="video-card">
+                            <div class="video-thumbnail">
+                                <img src="https://images.unsplash.com/photo-1557929878-b358f3bdbdd7?w=600&q=80" alt="Video">
+                                <div class="video-overlay">
+                                    <div class="play-button">
+                                        <i data-lucide="play"></i>
+                                    </div>
+                                </div>
+                                <span class="video-duration">15:45</span>
+                            </div>
+                            <div class="video-info">
+                                <h3 class="video-title">Témoignage - Dieu m'a Transformé</h3>
+                                <p class="video-views">150 vues</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Audios Tab -->
+                <div class="tab-content" id="audios">
+                    <div class="audio-list">
+                        <div class="audio-item">
+                            <div class="audio-play">
+                                <i data-lucide="play"></i>
+                            </div>
+                            <div class="audio-info">
+                                <h3 class="audio-title">Podcast - Vivre par la Foi</h3>
+                                <div class="audio-meta">
+                                    <span>20 Fév 2026</span>
+                                    <span>•</span>
+                                    <span>35:20</span>
+                                </div>
+                            </div>
+                            <div class="audio-actions">
+                                <button class="btn-icon">
+                                    <i data-lucide="download"></i>
+                                </button>
+                                <button class="btn-icon">
+                                    <i data-lucide="share-2"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="audio-item">
+                            <div class="audio-play">
+                                <i data-lucide="play"></i>
+                            </div>
+                            <div class="audio-info">
+                                <h3 class="audio-title">Message - La Grâce de Dieu</h3>
+                                <div class="audio-meta">
+                                    <span>18 Fév 2026</span>
+                                    <span>•</span>
+                                    <span>42:15</span>
+                                </div>
+                            </div>
+                            <div class="audio-actions">
+                                <button class="btn-icon">
+                                    <i data-lucide="download"></i>
+                                </button>
+                                <button class="btn-icon">
+                                    <i data-lucide="share-2"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="audio-item">
+                            <div class="audio-play">
+                                <i data-lucide="play"></i>
+                            </div>
+                            <div class="audio-info">
+                                <h3 class="audio-title">Enseignement - Le Saint-Esprit</h3>
+                                <div class="audio-meta">
+                                    <span>15 Fév 2026</span>
+                                    <span>•</span>
+                                    <span>38:50</span>
+                                </div>
+                            </div>
+                            <div class="audio-actions">
+                                <button class="btn-icon">
+                                    <i data-lucide="download"></i>
+                                </button>
+                                <button class="btn-icon">
+                                    <i data-lucide="share-2"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="audio-item">
+                            <div class="audio-play">
+                                <i data-lucide="play"></i>
+                            </div>
+                            <div class="audio-info">
+                                <h3 class="audio-title">Prédication - L'Amour de Christ</h3>
+                                <div class="audio-meta">
+                                    <span>13 Fév 2026</span>
+                                    <span>•</span>
+                                    <span>40:30</span>
+                                </div>
+                            </div>
+                            <div class="audio-actions">
+                                <button class="btn-icon">
+                                    <i data-lucide="download"></i>
+                                </button>
+                                <button class="btn-icon">
+                                    <i data-lucide="share-2"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Photos Tab -->
+                <div class="tab-content" id="photos">
+                    <div class="photo-grid">
+                        <div class="photo-album">
+                            <div class="album-icon">
+                                <i data-lucide="image"></i>
+                            </div>
+                            <h3 class="album-title">Culte Spécial Février 2026</h3>
+                            <p class="album-count">45 photos</p>
+                        </div>
+
+                        <div class="photo-album">
+                            <div class="album-icon">
+                                <i data-lucide="image"></i>
+                            </div>
+                            <h3 class="album-title">Baptême - 10 Février 2026</h3>
+                            <p class="album-count">32 photos</p>
+                        </div>
+
+                        <div class="photo-album">
+                            <div class="album-icon">
+                                <i data-lucide="image"></i>
+                            </div>
+                            <h3 class="album-title">Conférence Jeunesse</h3>
+                            <p class="album-count">68 photos</p>
+                        </div>
+
+                        <div class="photo-album">
+                            <div class="album-icon">
+                                <i data-lucide="image"></i>
+                            </div>
+                            <h3 class="album-title">Sortie Communautaire</h3>
+                            <p class="album-count">52 photos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="media-cta">
+                <button class="btn btn-primary btn-lg">Voir Toute la Médiathèque</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section-testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Témoignages</h2>
+                <p class="section-description">Ce que nos membres disent de leur expérience</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">"</div>
+                    <p class="testimonial-text">
+                        Cette communauté a transformé ma vie. J'ai trouvé un espace authentique où je peux être moi-même et grandir spirituellement.
+                    </p>
+                    <div class="testimonial-author">
+                        <p class="author-name">Sophie Mercier</p>
+                        <p class="author-role">Membre depuis 2 ans</p>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">"</div>
+                    <p class="testimonial-text">
+                        Les pratiques de méditation et les cercles de partage m'ont aidé à trouver la paix intérieure que je cherchais depuis longtemps.
+                    </p>
+                    <div class="testimonial-author">
+                        <p class="author-name">Marc Dubois</p>
+                        <p class="author-role">Membre depuis 1 an</p>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">"</div>
+                    <p class="testimonial-text">
+                        L'énergie bienveillante de ce groupe est incroyable. Je me sens soutenue et inspirée dans mon cheminement personnel.
+                    </p>
+                    <div class="testimonial-author">
+                        <p class="author-name">Amélie Laurent</p>
+                        <p class="author-role">Membre depuis 3 ans</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nous Contacter</h2>
+                <p class="section-description">Nous serions ravis de vous accueillir dans notre communauté</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-form-wrapper">
+                    <h3 class="form-title">Envoyez-nous un message</h3>
+                    <form class="contact-form">
+                        <input type="text" placeholder="Votre nom" class="form-input">
+                        <input type="email" placeholder="Votre email" class="form-input">
+                        <textarea placeholder="Votre message" rows="6" class="form-textarea"></textarea>
+                        <button type="submit" class="btn btn-primary btn-lg w-full">Envoyer</button>
+                    </form>
+                </div>
+
+                <div class="contact-info-wrapper">
+                    <h3 class="info-title">Informations</h3>
+                    <div class="contact-info-list">
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i data-lucide="map-pin"></i>
+                            </div>
+                            <div class="info-content">
+                                <p class="info-label">Adresse</p>
+                                <p class="info-text">123 Rue de la Paix<br>75001 Paris, France</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i data-lucide="mail"></i>
+                            </div>
+                            <div class="info-content">
+                                <p class="info-label">Email</p>
+                                <p class="info-text">contact@communaute-spirituelle.fr</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i data-lucide="phone"></i>
+                            </div>
+                            <div class="info-content">
+                                <p class="info-label">Téléphone</p>
+                                <p class="info-text">+33 1 23 45 67 89</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hours-box">
+                        <h4 class="hours-title">Horaires d'ouverture</h4>
+                        <p class="hours-text">Lundi - Vendredi: 9h00 - 21h00</p>
+                        <p class="hours-text">Samedi - Dimanche: 8h00 - 18h00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="logo-cecres.png" alt="CECRES Logo" class="footer-logo">
+                    <p class="footer-text">
+                        Un espace sacré pour grandir ensemble dans la conscience et la connexion
+                    </p>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-title">Liens Rapides</h4>
+                    <ul class="footer-links">
+                        <li><a href="#about">À propos</a></li>
+                        <li><a href="#services">Nos pratiques</a></li>
+                        <li><a href="#mediatheque">Événements</a></li>
+                        <li><a href="#contact">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-title">Ressources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#edification">Méditations guidées</a></li>
+                        <li><a href="#">Articles</a></li>
+                        <li><a href="#">Livres recommandés</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-title">Suivez-nous</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i data-lucide="facebook"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i data-lucide="instagram"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i data-lucide="youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 Communauté Spirituelle. Tous droits réservés.</p>
+                <p class="footer-heart">
+                    Créé avec <i data-lucide="heart"></i> et conscience
+                </p>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+</html>
+
